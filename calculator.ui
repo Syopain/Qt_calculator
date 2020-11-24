@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CalculatorClass</class>
+ <widget class="QDialog" name="CalculatorClass">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>370</width>
+    <height>640</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>370</width>
+    <height>640</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>740</width>
+    <height>1280</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>计算器</string>
+  </property>
+  <property name="toolTipDuration">
+   <number>0</number>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(158, 161, 162);</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="130,130,380">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,20">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(38, 38, 38);
+font: 18pt &quot;Agency FB&quot;;
+color: rgb(216, 216, 216);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="input">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(38, 38, 38);
+font: 18pt &quot;Agency FB&quot;;
+color: rgb(158, 161, 162);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="output">
+     <property name="styleSheet">
+      <string notr="true">font: 48pt &quot;Agency FB&quot;;
+background-color: rgb(38, 38, 38);
+color: rgb(252, 252, 252);</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetNoConstraint</enum>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>1</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <property name="spacing">
+      <number>1</number>
+     </property>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="btn_9">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(38, 38, 38);
+	font: 22pt &quot;Agency FB&quot;;
+	color: rgb(216, 216, 216);
+}
+QPushButton:hover{background-color: rgb(58, 58, 58);}
+QPushButton:pressed{background-color: rgb(28, 28, 28);}</string>
+       </property>
+       <property name="text">
+        <string>9</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QPushButton" name="btn_2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(38, 38, 38);
+	font: 22pt &quot;Agency FB&quot;;
+	color: rgb(216, 216, 216);
+}
+QPushButton:hover{background-color: rgb(58, 58, 58);}
+QPushButton:pressed{background-color: rgb(28, 28, 28);}</string>
+       </property>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0" colspan="2">
+      <widget class="QPushButton" name="btn_0">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(38, 38, 38);
+	font: 22pt &quot;Agency FB&quot;;
+	color: rgb(216, 216, 216);
+}
+QPushButton:hover{background-color: rgb(58, 58, 58);}
+QPushButton:pressed{background-color: rgb(28, 28, 28);}
+</string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="2">
+      <widget class="QPushButton" name="btn_dot">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(38, 38, 38);
+	font: 22pt &quot;Agency FB&quot;;
+	color: rgb(216, 216, 216);
+}
+QPushButton:hover{background-color: rgb(58, 58, 58);}
+QPushButton:pressed{background-color: rgb(28, 28, 28);}
+</string>
+       </property>
+       <property name="text">
+        <string>·</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="4">
+      <widget class="QPushButton" name="btn_equal">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(245, 122, 117);
+	font: 32pt &quot;Agency FB&quot;;
+	color: rgb(216, 216, 216);
+}
+QPushButton:hover{background-color: rgb(255, 138, 132);}
+QPushButton:pressed{background-color: rgb(235, 112, 107);}</string>
+       </property>
+       <property name="text">
+        <string>=</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="btn_6">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(38, 38, 38);
+	font: 22pt &quot;Agency FB&quot;;
+	color: rgb(216, 216, 216);
+}
+QPushButton:hover{background-color: rgb(58, 58, 58);}
+QPushButton:pressed{background-color: rgb(28, 28, 28);}</string>
+       </property>
+       <property name="text">
+        <string>6</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="btn_sign">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>32</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(38, 38, 38);
+	font: 32pt &quot;Agency FB&quot;;
+	color: rgb(216, 216, 216);
+}
+QPushButton:hover{background-color: rgb(58, 58, 58);}
+QPushButton:pressed{background-color: rgb(28, 28, 28);}
+</string>
+       </property>
+       <property name="text">
+        <string>±</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="btn_7">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(38, 38, 38);
+	font: 22pt &quot;Agency FB&quot;;
+	color: rgb(216, 216, 216);
+}
+QPushButton:hover{background-color: rgb(58, 58, 58);}
+QPushButton:pressed{background-color: rgb(28, 28, 28);}</string>
+       </property>
+       <property name="text">
+        <string>7</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QPushButton" name="btn_3">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(38, 38, 38);
+	font: 22pt &quot;Agency FB&quot;;
+	color: rgb(216, 216, 216);
+}
+QPushButton:hover{background-color: rgb(58, 58, 58);}
+QPushButton:pressed{background-color: rgb(28, 28, 28);}</string>
+       </property>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="btn_del">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(38, 38, 38);
+	font: 24pt &quot;Agency FB&quot;;
+	color: rgb(216, 216, 216);
+}
+QPushButton:hover{background-color: rgb(58, 58, 58);}
+QPushButton:pressed{background-color: rgb(28, 28, 28);}
+</string>
+       </property>
+       <property name="text">
+        <string>←</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="btn_4">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(38, 38, 38);
+	font: 22pt &quot;Agency FB&quot;;
+	color: rgb(216, 216, 216);
+}
+QPushButton:hover{background-color: rgb(58, 58, 58);}
+QPushButton:pressed{background-color: rgb(28, 28, 28);}</string>
+       </property>
+       <property name="text">
+        <string>4</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="btn_5">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(38, 38, 38);
+	font: 22pt &quot;Agency FB&quot;;
+	color: rgb(216, 216, 216);
+}
+QPushButton:hover{background-color: rgb(58, 58, 58);}
+QPushButton:pressed{background-color: rgb(28, 28, 28);}</string>
+       </property>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="btn_1">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(38, 38, 38);
+	font: 22pt &quot;Agency FB&quot;;
+	color: rgb(216, 216, 216);
+}
+QPushButton:hover{background-color: rgb(58, 58, 58);}
+QPushButton:pressed{background-color: rgb(28, 28, 28);}</string>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="btn_clear">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(38, 38, 38);
+	font: 22pt &quot;Agency FB&quot;;
+	color: rgb(216, 216, 216);
+}
+QPushButton:hover{background-color: rgb(58, 58, 58);}
+QPushButton:pressed{background-color: rgb(28, 28, 28);}
+</string>
+       </property>
+       <property name="text">
+        <string>C</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="4">
+      <widget class="QPushButton" name="btn_sub">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(38, 38, 38);
+	font: 32pt &quot;Agency FB&quot;;
+	color: rgb(216, 216, 216);
+}
+QPushButton:hover{background-color: rgb(58, 58, 58);}
+QPushButton:pressed{background-color: rgb(28, 28, 28);}
+</string>
+       </property>
+       <property name="text">
+        <string>-</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="4">
+      <widget class="QPushButton" name="btn_div">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(38, 38, 38);
+	font: 32pt &quot;Agency FB&quot;;
+	color: rgb(216, 216, 216);
+}
+QPushButton:hover{background-color: rgb(58, 58, 58);}
+QPushButton:pressed{background-color: rgb(28, 28, 28);}
+</string>
+       </property>
+       <property name="text">
+        <string>÷</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="btn_8">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(38, 38, 38);
+	font: 22pt &quot;Agency FB&quot;;
+	color: rgb(216, 216, 216);
+}
+QPushButton:hover{background-color: rgb(58, 58, 58);}
+QPushButton:pressed{background-color: rgb(28, 28, 28);}</string>
+       </property>
+       <property name="text">
+        <string>8</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="4">
+      <widget class="QPushButton" name="btn_add">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(38, 38, 38);
+	font: 32pt &quot;Agency FB&quot;;
+	color: rgb(216, 216, 216);
+}
+QPushButton:hover{background-color: rgb(58, 58, 58);}
+QPushButton:pressed{background-color: rgb(28, 28, 28);}
+</string>
+       </property>
+       <property name="text">
+        <string>+</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="4">
+      <widget class="QPushButton" name="btn_mul">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(38, 38, 38);
+	font: 32pt &quot;Agency FB&quot;;
+	color: rgb(216, 216, 216);
+}
+QPushButton:hover{background-color: rgb(58, 58, 58);}
+QPushButton:pressed{background-color: rgb(28, 28, 28);}
+</string>
+       </property>
+       <property name="text">
+        <string>×</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="calculator.qrc"/>
+ </resources>
+ <connections/>
+</ui>
