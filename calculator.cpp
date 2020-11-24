@@ -105,7 +105,7 @@ void Calculator::on_btn_mul_clicked()
         ui.input->setText("");
     ui.input->setText(ui.input->text() +
                       ui.output->text() +
-                      u8"<font color=#F57A75 size=4> �� </font>"
+                      u8"<font color=#F57A75 size=4> × </font>"
                      );
     ui.output->setText(QString::number(core.expr(ui.output->text()), 'g', 9));
     istr.clear();
@@ -118,7 +118,7 @@ void Calculator::on_btn_div_clicked()
         ui.input->setText("");
     ui.input->setText(ui.input->text() +
                       ui.output->text() +
-                      u8"<font color=#F57A75 size=4> �� </font>"
+                      u8"<font color=#F57A75 size=4> ÷ </font>"
                      );
     ui.output->setText(QString::number(core.expr(ui.output->text()), 'g', 9));
     istr.clear();
